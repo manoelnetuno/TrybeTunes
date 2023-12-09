@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Carregamessage from './message';
+import Carregamessage from './Message';
 import { createUser } from '../services/userAPI';
 
 type LoginProps = {
