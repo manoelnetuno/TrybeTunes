@@ -17,7 +17,6 @@ function MusicCard({ trackName, previewUrl, trackId }: SongType) {
         <input
           type="checkbox"
           checked={ Favorite }
-          style={ { display: 'none' } }
           onChange={ handleCheckbox }
         />
         Marcar como favorita

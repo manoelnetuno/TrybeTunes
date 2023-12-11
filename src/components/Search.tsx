@@ -54,7 +54,7 @@ function Search() {
       {albumList.map((album) => (
         <div key={ album.collectionId }>
           <p>
-            Album:
+            <span> Album: </span>
             {' '}
             {album.collectionName}
           </p>
@@ -69,5 +69,4 @@ function Search() {
     </div>
   );
 }
-
 export default Search;
