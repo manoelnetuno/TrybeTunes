@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Search from './components/Search';
 import Album from './components/Album';
+import Layout from './components/Layout';
+import NotFoundPage from './components/notfoundpage';
 
 function App() {
   const handleloginsubmit = (name:string) => {
@@ -9,15 +11,20 @@ function App() {
   };
 
   return (
-    <>
-      <p>Trybetunes</p>
-      <Routes>
-        <Route path="/" element={ <Login onSubmit={ handleloginsubmit } /> } />
-        <Route path="/search" Component={ Search } />
+    <div>
 
-        <Route path="/album/:id" element={ <Album /> } />
+      <p>Trybetunes</p>
+
+      <Routes>
+        <Route index element={ <Login onSubmit={ handleloginsubmit } /> } />
+        <Route path="/" element={ <Layout /> }>
+          <Route path="/search" element={ <Search /> } />
+          <Route path="/album/:id" element={ <Album /> } />
+        </Route>
+        <Route path="*" element={ <NotFoundPage /> } />
       </Routes>
-    </>
+    </div>
+
   );
 }
 
