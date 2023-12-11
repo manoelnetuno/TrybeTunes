@@ -17,14 +17,15 @@ function Search() {
   const handleSearch = async (e: any) => {
     e.preventDefault();
     setLoading(true);
-    const result = await searchAlbumsAPI(artistName);
-    setAlbumList(result);
-    if (result.length === 0) {
+    const fetchapi = await searchAlbumsAPI(artistName);
+    console.log('Resultado da API:', fetchapi);
+    setAlbumList(fetchapi);
+    if (fetchapi.length === 0) {
       setResultMessage('Nenhum álbum foi encontrado');
     } else {
       setResultMessage(`Resultado de álbuns de: ${artistName}`);
     }
-    console.log('Resultado da API:', result);
+    console.log('Resultado da API:', fetchapi);
     setLoading(false);
     setArtistName('');
   };

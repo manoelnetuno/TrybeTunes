@@ -45,6 +45,7 @@ function Album() {
                 <MusicCard
                   trackName={ music.trackName }
                   previewUrl={ music.previewUrl }
+                  trackId={ music.trackId }
                 />
               </li>
             ))}
