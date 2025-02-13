@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Carregamessage from './Message';
 import { createUser } from '../services/userAPI';
-import './Login.css';
+import '../css/Login.css';
 
 type LoginProps = {
   onSubmit: (name: string) => void;
