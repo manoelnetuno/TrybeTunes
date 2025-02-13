@@ -4,6 +4,7 @@ import Search from './components/Search';
 import Album from './components/Album';
 import Layout from './components/Layout';
 import NotFoundPage from './components/notfoundpage';
+import './css/App.css'
 
 function App() {
   const handleloginsubmit = (name:string) => {
